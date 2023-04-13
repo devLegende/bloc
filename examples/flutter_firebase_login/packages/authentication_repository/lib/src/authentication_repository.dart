@@ -25,6 +25,7 @@ class SignUpWithEmailAndPasswordFailure implements Exception {
         return const SignUpWithEmailAndPasswordFailure(
           'Email is not valid or badly formatted.',
         );
+        // 'user-disabled' error code is not exist on documentation because the user is not created yet 
       case 'user-disabled':
         return const SignUpWithEmailAndPasswordFailure(
           'This user has been disabled. Please contact support for help.',
