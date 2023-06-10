@@ -9,10 +9,10 @@ class Avatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final photo = this.photo;
+    //final photo = this.photo // i gess we can use the null assertion operato(!), so this variable now is useless 
     return CircleAvatar(
       radius: _avatarSize,
-      backgroundImage: photo != null ? NetworkImage(photo) : null,
+      backgroundImage: photo != null ? NetworkImage(photo!) : null,
       child: photo == null
           ? const Icon(Icons.person_outline, size: _avatarSize)
           : null,
